@@ -20,9 +20,9 @@ The five stages are:
 
 ## Instruction set architecture (ISA)
 
-![Screenshot](isa/diagram.png)
+![Screenshot](images/isa.png)
 
-![Screenshot](isa2/diagram.png)
+![Screenshot](images/isa2.png)
 
 ## Structure
 In the src folder, there are two top modules (and in the testbench folder, there is one testbench for each top module): SingleCycle.vhd (non-pipelined processor where each instruction is completed in a single clock cycle) and FiveStagePipeline.vhd (pipelined processor where max 5 instructions are executed simultaneously in different stages). Although the pipelined is obviously faster (increases clock frequency and system throughput), there are data and control hazards that need to be solved. For that end, some techniques were applied such as data forwarding (for data hazards) and predict branch not taken (for control hazards).
